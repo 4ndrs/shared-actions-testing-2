@@ -1,0 +1,15 @@
+{
+  "name": "shared-actions-testing-2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "echo linting desu",
+    "build": "echo building desu",
+    "release": "pnpm lint && pnpm build && release-it --only-version",
+    "release:cli": "pnpm lint && pnpm build && release-it --increment \"${RELEASE_TYPE:-patch}\" --ci",
+    "release:cli-custom": "pnpm lint && pnpm build && release-it \"${RELEASE_TYPE}\" --ci"
+  },
+  "devDependencies": {
+    "release-it": "^19.2.4"
+  }
+}
